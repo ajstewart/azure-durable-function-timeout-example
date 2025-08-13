@@ -24,11 +24,17 @@ Under load the activity will sometimes freeze and result in a function timeout a
 
 1. Clone the repository.
 2. Ensure you have Docker installed and running along with azure function core tools.
-3. Run the following command to start the services:
+3. Create the python environment how you wish and install the dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the following command to start the services:
 
    ```bash
    docker compose up -d
    func start
    ```
 
-4. Keep sending many requests to `localhost:7071/api/orchestrators/hello_orchestrator`, and eventually the above error message will appear.
+5. Keep sending many requests to `localhost:7071/api/orchestrators/hello_orchestrator`, and eventually the above error message will appear.
